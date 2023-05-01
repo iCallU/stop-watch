@@ -9,7 +9,7 @@ const Watch = () => {
     const[minute,setMinute]= useState(59);
     const[Hours,setHours]= useState(5);
     let secondTime = useRef();
-    const secondFun =() =>{
+    const secondFun =(stop) =>{
         console.log('onclick clicked')
         secondTime.current = setInterval(()=>{setSecond((prevState)=> prevState + 1)},1000)
         
