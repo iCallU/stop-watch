@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react'
+import React,{useState,useRef,useEffect} from 'react'
 
 const Watch = () => {
     
@@ -9,7 +9,9 @@ const Watch = () => {
     const[minute,setMinute]= useState(59);
     const[Hours,setHours]= useState(5);
     let secondTime = useRef();
-    const secondFun =(stop) =>{
+
+    useEffect(()=>{},[]);
+    const secondFun =() =>{
         console.log('onclick clicked')
         secondTime.current = setInterval(()=>{setSecond((prevState)=> prevState + 1)},1000)
         
